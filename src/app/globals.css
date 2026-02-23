@@ -1,0 +1,394 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ── Light Theme (Default) ── */
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #f8fafc;
+  --card-foreground: #0f172a;
+  --primary: #2563eb;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #334155;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --border: #e2e8f0;
+  --ring: #2563eb;
+}
+
+/* ── Dark Theme ── */
+.dark {
+  --background: #0b1120;
+  --foreground: #e2e8f0;
+  --card: #111827;
+  --card-foreground: #e2e8f0;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  --secondary-foreground: #cbd5e1;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  --accent: #1e293b;
+  --accent-foreground: #e2e8f0;
+  --border: #1e293b;
+  --ring: #3b82f6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ring);
+}
+
+::selection {
+  background: rgba(37, 99, 235, 0.2);
+  color: var(--foreground);
+}
+
+.dark ::selection {
+  background: rgba(59, 130, 246, 0.3);
+}
+
+/* ── Cards ── */
+.pro-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pro-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(37, 99, 235, 0.03),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.dark .pro-card::before {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(59, 130, 246, 0.05),
+    transparent
+  );
+}
+
+.pro-card:hover::before {
+  left: 100%;
+}
+
+.pro-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06),
+              0 0 0 1px rgba(37, 99, 235, 0.08);
+  transform: translateY(-4px);
+}
+
+.dark .pro-card:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
+              0 0 0 1px rgba(59, 130, 246, 0.15);
+}
+
+/* ── Nav Glass ── */
+.nav-glass {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .nav-glass {
+  background: rgba(11, 17, 32, 0.85);
+}
+
+/* ── Section Divider ── */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--border),
+    transparent
+  );
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+/* ── Code Block ── */
+.code-block {
+  font-family: 'JetBrains Mono', monospace;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.code-block:hover {
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.dark .code-block:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Tag Pill ── */
+.tag-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  background: var(--secondary);
+  color: var(--muted-foreground);
+  border: 1px solid var(--border);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: default;
+}
+
+.tag-pill:hover {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.dark .tag-pill:hover {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+/* ── Smooth Link Underlines ── */
+.link-underline {
+  position: relative;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* ── Magnetic Button Hover Effect ── */
+.btn-magnetic {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-magnetic:hover {
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.25);
+}
+
+.dark .btn-magnetic:hover {
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* ── Smooth Focus Styles ── */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark input:focus,
+.dark textarea:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* ── Animated Gradient Border ── */
+.gradient-border {
+  position: relative;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--angle, 0deg),
+    var(--primary),
+    transparent 40%,
+    var(--primary)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: spin-border 4s linear infinite;
+}
+
+@keyframes spin-border {
+  to { --angle: 360deg; }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* ── Pulse Ring (for status indicators) ── */
+.pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { opacity: 0.75; transform: scale(1); }
+  50% { opacity: 0; transform: scale(1.8); }
+}
+
+/* ── Shimmer Loading Effect ── */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+
+/* ── Smooth Image Reveal ── */
+.img-reveal {
+  clip-path: circle(0% at 50% 50%);
+  animation: reveal-circle 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes reveal-circle {
+  to { clip-path: circle(75% at 50% 50%); }
+}
+
+/* ── Floating Particles (CSS-only subtle) ── */
+.float-particle {
+  animation: float-particle 6s ease-in-out infinite;
+}
+
+@keyframes float-particle {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  33% { transform: translate(10px, -10px) rotate(5deg); }
+  66% { transform: translate(-5px, 5px) rotate(-3deg); }
+}
+
+/* ── Text Gradient Animation ── */
+.text-shimmer {
+  background: linear-gradient(
+    110deg,
+    var(--foreground) 35%,
+    var(--primary) 50%,
+    var(--foreground) 65%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: text-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes text-shimmer {
+  0% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* ── Smooth Theme Transition for All Elements ── */
+*,
+*::before,
+*::after {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset transition for animation elements to prevent conflicts */
+[data-framer-component],
+.framer-motion,
+motion,
+[style*="transform"] {
+  transition-property: none;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
