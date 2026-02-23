@@ -124,7 +124,7 @@ export default function About() {
 
           {/* Right: Highlight cards */}
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {highlights.map((item, i) => (
+            {highlights.map((item) => (
               <StaggerItem key={item.title}>
                 <motion.div
                   whileHover={{ y: -6, scale: 1.02 }}
