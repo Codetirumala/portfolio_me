@@ -148,7 +148,7 @@ export default function Hero() {
                   },
                   {
                     icon: FaLinkedin,
-                    href: "https://linkedin.com/in/lakshminarasimha",
+                    href: "https://www.linkedin.com/in/reddi-lakshmi-narasimha-543a45289/",
                     label: "LinkedIn",
                   },
                 ].map((social) => (
