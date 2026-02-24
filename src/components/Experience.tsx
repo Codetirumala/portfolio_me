@@ -50,7 +50,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="relative py-16 sm:py-24 md:py-32">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
             title="Experience"
@@ -81,29 +81,29 @@ export default function Experience() {
                   </motion.div>
 
                   <div className="pro-card rounded-2xl p-5 sm:p-6 md:p-8">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 sm:gap-2 mb-3 sm:mb-4">
+                    <div className="flex flex-col items-center sm:items-start sm:flex-row sm:justify-between gap-1.5 sm:gap-2 mb-3 sm:mb-4 text-center sm:text-left">
                       <div>
                         <h3 className="text-lg sm:text-xl font-bold text-foreground">
                           {exp.title}
                         </h3>
-                        <div className="flex items-center gap-2 text-primary">
+                        <div className="flex items-center justify-center sm:justify-start gap-2 text-primary">
                           <HiOutlineBriefcase className="text-sm" />
                           <span className="text-sm font-medium">
                             {exp.company}
                           </span>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 text-muted-foreground">
+                      <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground">
                         <HiOutlineCalendar className="text-sm" />
                         <span className="text-sm">{exp.period}</span>
                       </div>
                     </div>
 
-                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 text-center sm:text-left">
                       {exp.description}
                     </p>
 
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap justify-center sm:justify-start gap-2">
                       {exp.tech.map((t) => (
                         <span
                           key={t}

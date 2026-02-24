@@ -37,7 +37,7 @@ const highlights = [
 export default function About() {
   return (
     <section id="about" className="relative py-16 sm:py-24 md:py-32 bg-secondary/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
             title="About Me"
@@ -49,7 +49,7 @@ export default function About() {
           {/* Left: About text */}
           <AnimatedSection direction="left" delay={0.2}>
             <div className="space-y-6">
-              <div className="code-block rounded-2xl p-4 sm:p-6 md:p-8">
+              <div className="code-block rounded-2xl p-4 sm:p-6 md:p-8 mx-auto lg:mx-0">
                 <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500" />
                   <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500" />
@@ -111,7 +111,7 @@ export default function About() {
                 </div>
               </div>
 
-              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base text-center lg:text-left">
                 I&apos;m a dynamic and detail-oriented Computer Science student
                 at Aditya Institute of Technology and Management, specializing in
                 AI &amp; ML. With hands-on expertise in MERN stack development,
@@ -123,15 +123,15 @@ export default function About() {
           </AnimatedSection>
 
           {/* Right: Highlight cards */}
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <StaggerContainer className="grid grid-cols-2 gap-3 sm:gap-4">
             {highlights.map((item) => (
               <StaggerItem key={item.title}>
                 <motion.div
                   whileHover={{ y: -6, scale: 1.02 }}
-                  className="pro-card rounded-2xl p-4 sm:p-6 group cursor-default h-full"
+                  className="pro-card rounded-2xl p-4 sm:p-6 group cursor-default h-full text-center lg:text-left"
                 >
                   <div
-                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform mx-auto lg:mx-0"
                   >
                     <item.icon className="text-primary text-xl sm:text-2xl" />
                   </div>

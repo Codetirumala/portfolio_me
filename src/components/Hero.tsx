@@ -28,7 +28,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 sm:px-6 lg:px-8 pt-20 sm:pt-24">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Left: Text Content */}
           <div className="flex-1 text-center lg:text-left">
@@ -87,7 +87,7 @@ export default function Hero() {
 
             {/* Summary */}
             <AnimatedSection delay={0.5}>
-              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mb-6 sm:mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-6 sm:mb-8 leading-relaxed">
                 Dynamic Computer Science student with hands-on expertise in{" "}
                 <span className="text-primary font-medium">AI integration</span>,{" "}
                 <span className="text-primary font-medium">
@@ -171,7 +171,7 @@ export default function Hero() {
 
           {/* Right: Profile Image */}
           <AnimatedSection delay={0.3}>
-            <div className="relative flex-shrink-0">
+            <div className="relative flex-shrink-0 flex justify-center">
               {/* Animated rotating ring */}
               <motion.div
                 animate={{ rotate: 360 }}

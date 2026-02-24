@@ -90,7 +90,7 @@ export default function Skills() {
   return (
     <section id="skills" className="relative py-16 sm:py-24 md:py-32">
       {/* Background accent */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
             title="Tech Stack"
@@ -105,14 +105,14 @@ export default function Skills() {
                 whileHover={{ y: -4 }}
                 className="pro-card rounded-2xl p-4 sm:p-6 h-full"
               >
-                <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
+                <div className="flex items-center justify-center sm:justify-start gap-2.5 sm:gap-3 mb-4 sm:mb-6">
                   <span className="text-xl sm:text-2xl">{category.icon}</span>
                   <h3 className="text-foreground font-semibold text-base sm:text-lg">
                     {category.title}
                   </h3>
                 </div>
 
-                <div className="flex flex-wrap gap-2 sm:gap-3">
+                <div className="flex flex-wrap justify-center sm:justify-start gap-2 sm:gap-3">
                   {category.skills.map((skill, skillIdx) => (
                     <motion.div
                       key={skill.name}

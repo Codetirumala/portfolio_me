@@ -35,7 +35,7 @@ export default function Education() {
     <section id="education" className="relative py-16 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-secondary/20" />
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl mx-auto px-6 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
             title="Education"
@@ -50,7 +50,7 @@ export default function Education() {
                 whileHover={{ y: -4, scale: 1.01 }}
                 className="pro-card rounded-2xl p-4 sm:p-6 md:p-8 group"
               >
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                <div className="flex flex-col items-center sm:flex-row sm:items-start gap-4 sm:gap-6">
                   {/* Icon */}
                   <div
                     className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-primary/10 flex items-center justify-center text-2xl sm:text-3xl shrink-0 group-hover:scale-110 transition-transform"
@@ -59,18 +59,18 @@ export default function Education() {
                   </div>
 
                   {/* Content */}
-                  <div className="flex-1">
+                  <div className="flex-1 text-center sm:text-left">
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
                       <div>
                         <h3 className="text-base sm:text-lg font-bold text-foreground">
                           {edu.degree}
                         </h3>
-                        <div className="flex items-center gap-2 text-muted-foreground mt-1">
+                        <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground mt-1">
                           <HiOutlineAcademicCap className="text-sm" />
                           <span className="text-sm">{edu.institution}</span>
                         </div>
                       </div>
-                      <div className="flex items-center gap-2 text-muted-foreground shrink-0">
+                      <div className="flex items-center justify-center sm:justify-start gap-2 text-muted-foreground shrink-0">
                         <HiOutlineCalendar className="text-sm" />
                         <span className="text-sm">{edu.period}</span>
                       </div>
@@ -82,7 +82,7 @@ export default function Education() {
                       whileInView={{ scale: 1, opacity: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.15 + 0.3 }}
-                      className="inline-flex mt-3"
+                      className="inline-flex mt-3 justify-center sm:justify-start w-full sm:w-auto"
                     >
                       <span
                         className="px-4 py-1.5 rounded-full text-sm font-semibold bg-primary text-primary-foreground"

@@ -74,7 +74,7 @@ export default function Certifications() {
     <section id="certifications" className="relative py-16 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-secondary/20" />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
             title="Certifications"
@@ -89,7 +89,7 @@ export default function Certifications() {
                 whileHover={{ y: -6, scale: 1.02 }}
                 className="pro-card rounded-2xl p-4 sm:p-6 group cursor-default h-full"
               >
-                <div className="flex items-start gap-3 sm:gap-4">
+                <div className="flex flex-col items-center sm:flex-row sm:items-start gap-3 sm:gap-4 text-center sm:text-left">
                   {/* Icon */}
                   <div
                     className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
@@ -103,7 +103,7 @@ export default function Certifications() {
                     <h3 className="text-foreground font-semibold text-sm sm:text-base mb-1 group-hover:text-primary transition-colors">
                       {cert.title}
                     </h3>
-                    <p className="text-muted-foreground text-xs sm:text-sm flex items-center gap-1">
+                    <p className="text-muted-foreground text-xs sm:text-sm flex items-center justify-center sm:justify-start gap-1">
                       <HiOutlineBadgeCheck
                         className="shrink-0"
                         style={{ color: cert.color }}

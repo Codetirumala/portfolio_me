@@ -59,7 +59,7 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-16 sm:py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
             title="Get In Touch"
@@ -70,7 +70,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Info */}
           <AnimatedSection direction="left" delay={0.2}>
-            <div className="space-y-6">
+            <div className="space-y-6 text-center lg:text-left">
               <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                 Let&apos;s build something amazing together
               </h3>
@@ -92,7 +92,7 @@ export default function Contact() {
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 + 0.3 }}
                     whileHover={{ x: 6 }}
-                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-secondary transition-all group"
+                    className="flex flex-col items-center sm:flex-row sm:items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-secondary transition-all group text-center sm:text-left"
                   >
                     <div
                       className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"

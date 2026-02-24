@@ -71,7 +71,7 @@ const projects: Project[] = [
 export default function Projects() {
   return (
     <section id="projects" className="relative py-16 sm:py-24 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
             title="Projects"
@@ -89,9 +89,9 @@ export default function Projects() {
                 {/* Accent bar */}
                 <div className="h-1 bg-primary" />
 
-                <div className="p-4 sm:p-6 flex-1 flex flex-col">
+                <div className="p-4 sm:p-6 flex-1 flex flex-col items-center sm:items-start text-center sm:text-left">
                   {/* Category badge */}
-                  <span className="inline-flex self-start px-2.5 py-1 text-xs font-medium rounded-full bg-secondary text-muted-foreground border border-border mb-3 sm:mb-4">
+                  <span className="inline-flex self-center sm:self-start px-2.5 py-1 text-xs font-medium rounded-full bg-secondary text-muted-foreground border border-border mb-3 sm:mb-4">
                     {project.category}
                   </span>
 
@@ -106,7 +106,7 @@ export default function Projects() {
                   </p>
 
                   {/* Tech stack */}
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
+                  <div className="flex flex-wrap justify-center sm:justify-start gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                     {project.tech.map((t) => (
                       <span
                         key={t}
@@ -118,7 +118,7 @@ export default function Projects() {
                   </div>
 
                   {/* Actions */}
-                  <div className="flex items-center gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-border">
+                  <div className="flex items-center justify-center sm:justify-start gap-2 sm:gap-3 pt-3 sm:pt-4 border-t border-border w-full">
                     {project.githubUrl && (
                       <motion.a
                         href={project.githubUrl}
