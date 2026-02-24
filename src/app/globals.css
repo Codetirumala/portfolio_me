@@ -133,6 +133,12 @@ body {
   transform: translateY(-4px);
 }
 
+@media (max-width: 640px) {
+  .pro-card:hover {
+    transform: none;
+  }
+}
+
 .dark .pro-card:hover {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4),
               0 0 0 1px rgba(59, 130, 246, 0.15);
@@ -186,9 +192,9 @@ body {
 .tag-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  font-size: 0.8rem;
+  gap: 4px;
+  padding: 5px 10px;
+  font-size: 0.75rem;
   font-weight: 500;
   border-radius: 9999px;
   background: var(--secondary);
@@ -196,6 +202,14 @@ body {
   border: 1px solid var(--border);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: default;
+}
+
+@media (min-width: 640px) {
+  .tag-pill {
+    gap: 6px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
 }
 
 .tag-pill:hover {

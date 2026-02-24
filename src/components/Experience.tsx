@@ -49,7 +49,7 @@ export default function Experience() {
   });
 
   return (
-    <section id="experience" className="relative py-24 sm:py-32">
+    <section id="experience" className="relative py-16 sm:py-24 md:py-32">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
@@ -59,32 +59,31 @@ export default function Experience() {
         </AnimatedSection>
 
         <div className="relative" ref={timelineRef}>
-          {/* Animated timeline line - grows as you scroll */}
-          <div className="absolute left-0 sm:left-8 top-0 bottom-0 w-px bg-border" />
+          <div className="absolute left-0 sm:left-8 top-0 bottom-0 w-px bg-border hidden sm:block" />
           <motion.div
-            className="absolute left-0 sm:left-8 top-0 bottom-0 w-px bg-primary origin-top"
+            className="absolute left-0 sm:left-8 top-0 bottom-0 w-px bg-primary origin-top hidden sm:block"
             style={{ scaleY }}
           />
 
-          <div className="space-y-12">
+          <div className="space-y-8 sm:space-y-12">
             {experiences.map((exp, i) => (
               <AnimatedSection key={exp.title + exp.company} delay={i * 0.15} direction="left">
-                <div className="relative pl-8 sm:pl-20">
+                <div className="relative pl-0 sm:pl-20">
                   {/* Timeline dot */}
                   <motion.div
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.15 + 0.3 }}
-                    className="absolute left-0 sm:left-8 top-1 -translate-x-1/2"
+                    className="absolute left-0 sm:left-8 top-1 -translate-x-1/2 hidden sm:block"
                   >
                     <div className="w-4 h-4 rounded-full bg-primary ring-4 ring-background" />
                   </motion.div>
 
-                  <div className="pro-card rounded-2xl p-6 sm:p-8">
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
+                  <div className="pro-card rounded-2xl p-5 sm:p-6 md:p-8">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5 sm:gap-2 mb-3 sm:mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-foreground">
+                        <h3 className="text-lg sm:text-xl font-bold text-foreground">
                           {exp.title}
                         </h3>
                         <div className="flex items-center gap-2 text-primary">
@@ -100,7 +99,7 @@ export default function Experience() {
                       </div>
                     </div>
 
-                    <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4">
                       {exp.description}
                     </p>
 

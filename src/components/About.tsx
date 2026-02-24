@@ -36,7 +36,7 @@ const highlights = [
 
 export default function About() {
   return (
-    <section id="about" className="relative py-24 sm:py-32 bg-secondary/30">
+    <section id="about" className="relative py-16 sm:py-24 md:py-32 bg-secondary/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
@@ -45,20 +45,20 @@ export default function About() {
           />
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
           {/* Left: About text */}
           <AnimatedSection direction="left" delay={0.2}>
             <div className="space-y-6">
-              <div className="code-block rounded-2xl p-8">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 rounded-full bg-red-500" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-500" />
-                  <div className="w-3 h-3 rounded-full bg-green-500" />
+              <div className="code-block rounded-2xl p-4 sm:p-6 md:p-8">
+                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-500" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-500" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-500" />
                   <span className="text-xs text-muted-foreground ml-2 font-mono">
                     about.tsx
                   </span>
                 </div>
-                <div className="font-mono text-sm space-y-2">
+                <div className="font-mono text-xs sm:text-sm space-y-1.5 sm:space-y-2">
                   <p>
                     <span className="text-purple-600 dark:text-purple-400">const</span>{" "}
                     <span className="text-primary">developer</span>{" "}
@@ -111,7 +111,7 @@ export default function About() {
                 </div>
               </div>
 
-              <p className="text-muted-foreground leading-relaxed text-base">
+              <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                 I&apos;m a dynamic and detail-oriented Computer Science student
                 at Aditya Institute of Technology and Management, specializing in
                 AI &amp; ML. With hands-on expertise in MERN stack development,
@@ -128,14 +128,14 @@ export default function About() {
               <StaggerItem key={item.title}>
                 <motion.div
                   whileHover={{ y: -6, scale: 1.02 }}
-                  className="pro-card rounded-2xl p-6 group cursor-default h-full"
+                  className="pro-card rounded-2xl p-4 sm:p-6 group cursor-default h-full"
                 >
                   <div
-                    className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform"
                   >
-                    <item.icon className="text-primary text-2xl" />
+                    <item.icon className="text-primary text-xl sm:text-2xl" />
                   </div>
-                  <h3 className="text-foreground font-semibold text-lg mb-1">
+                  <h3 className="text-foreground font-semibold text-base sm:text-lg mb-1">
                     {item.title}
                   </h3>
                   <p className="text-muted-foreground text-sm">{item.description}</p>

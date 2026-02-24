@@ -58,7 +58,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32">
+    <section id="contact" className="relative py-16 sm:py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <SectionHeading
@@ -67,20 +67,20 @@ export default function Contact() {
           />
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Info */}
           <AnimatedSection direction="left" delay={0.2}>
             <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-foreground mb-2">
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-2">
                 Let&apos;s build something amazing together
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 I&apos;m always open to discussing new projects, creative ideas,
                 or opportunities to be part of your vision. Feel free to reach
                 out through any of the channels below.
               </p>
 
-              <div className="grid gap-4 mt-8">
+              <div className="grid gap-3 sm:gap-4 mt-6 sm:mt-8">
                 {contactInfo.map((info, i) => (
                   <motion.a
                     key={info.label}
@@ -92,18 +92,18 @@ export default function Contact() {
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 + 0.3 }}
                     whileHover={{ x: 6 }}
-                    className="flex items-center gap-4 p-4 rounded-xl hover:bg-secondary transition-all group"
+                    className="flex items-center gap-3 sm:gap-4 p-3 sm:p-4 rounded-xl hover:bg-secondary transition-all group"
                   >
                     <div
-                      className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
                     >
-                      <info.icon className="text-primary text-xl" />
+                      <info.icon className="text-primary text-lg sm:text-xl" />
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <p className="text-xs text-muted-foreground uppercase tracking-wider">
                         {info.label}
                       </p>
-                      <p className="text-foreground text-sm font-medium">
+                      <p className="text-foreground text-xs sm:text-sm font-medium truncate">
                         {info.value}
                       </p>
                     </div>
@@ -117,9 +117,9 @@ export default function Contact() {
           <AnimatedSection direction="right" delay={0.3}>
             <form
               onSubmit={handleSubmit}
-              className="pro-card rounded-2xl p-6 sm:p-8 space-y-5"
+              className="pro-card rounded-2xl p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-5"
             >
-              <div className="grid sm:grid-cols-2 gap-5">
+              <div className="grid sm:grid-cols-2 gap-4 sm:gap-5">
                 <div>
                   <label className="block text-sm text-muted-foreground mb-2">
                     Your Name
@@ -189,7 +189,7 @@ export default function Contact() {
                   type="submit"
                   whileHover={{ scale: 1.02, y: -2 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-primary text-primary-foreground font-semibold shadow-lg shadow-primary/20 hover:opacity-90 transition-all"
+                  className="w-full flex items-center justify-center gap-2 px-5 py-3.5 sm:px-6 sm:py-4 rounded-xl bg-primary text-primary-foreground text-sm sm:text-base font-semibold shadow-lg shadow-primary/20 hover:opacity-90 transition-all"
                 >
                   <HiOutlinePaperAirplane className="text-lg rotate-90" />
                   Send Message

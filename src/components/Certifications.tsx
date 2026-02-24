@@ -71,7 +71,7 @@ const certifications = [
 
 export default function Certifications() {
   return (
-    <section id="certifications" className="relative py-24 sm:py-32">
+    <section id="certifications" className="relative py-16 sm:py-24 md:py-32">
       <div className="absolute inset-0 bg-secondary/20" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,19 +82,20 @@ export default function Certifications() {
           />
         </AnimatedSection>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {certifications.map((cert) => (
             <StaggerItem key={cert.title}>
               <motion.div
                 whileHover={{ y: -6, scale: 1.02 }}
-                className="pro-card rounded-2xl p-6 group cursor-default h-full"
+                className="pro-card rounded-2xl p-4 sm:p-6 group cursor-default h-full"
               >
-                <div className="flex items-start gap-4">
+                <div className="flex items-start gap-3 sm:gap-4">
                   {/* Icon */}
                   <div
-                    className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"
                   >
-                    <cert.icon size={24} style={{ color: cert.color }} />
+                    <cert.icon size={20} className="sm:hidden" style={{ color: cert.color }} />
+                    <cert.icon size={24} className="hidden sm:block" style={{ color: cert.color }} />
                   </div>
 
                   {/* Content */}

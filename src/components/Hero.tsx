@@ -28,8 +28,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-24">
-        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24">
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
           {/* Left: Text Content */}
           <div className="flex-1 text-center lg:text-left">
             {/* Status badge */}
@@ -52,7 +52,7 @@ export default function Hero() {
 
             {/* Name */}
             <AnimatedSection delay={0.2}>
-              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-3 sm:mb-4">
                 <span className="text-foreground">Hi, I&apos;m </span>
                 <br className="sm:hidden" />
                 <span className="text-primary">Reddi Lakshmi</span>
@@ -63,7 +63,7 @@ export default function Hero() {
 
             {/* Typing animation */}
             <AnimatedSection delay={0.4}>
-              <div className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 h-10">
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 h-8 sm:h-10">
                 <TypeAnimation
                   sequence={[
                     "Full Stack Developer",
@@ -87,7 +87,7 @@ export default function Hero() {
 
             {/* Summary */}
             <AnimatedSection delay={0.5}>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-xl mb-8 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mb-6 sm:mb-8 leading-relaxed">
                 Dynamic Computer Science student with hands-on expertise in{" "}
                 <span className="text-primary font-medium">AI integration</span>,{" "}
                 <span className="text-primary font-medium">
@@ -103,13 +103,13 @@ export default function Hero() {
 
             {/* CTA Buttons */}
             <AnimatedSection delay={0.6}>
-              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row items-center lg:items-start gap-3 sm:gap-4 mb-6 sm:mb-8">
                 <MagneticButton>
                   <motion.a
                     href="#contact"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold shadow-lg shadow-primary/20 btn-magnetic transition-all"
+                    className="group flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-full bg-primary text-primary-foreground text-sm sm:text-base font-semibold shadow-lg shadow-primary/20 btn-magnetic transition-all"
                   >
                     <HiOutlineMail className="text-lg" />
                     Get in Touch
@@ -128,7 +128,7 @@ export default function Hero() {
                     href="#projects"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 px-8 py-4 rounded-full border border-border text-foreground font-semibold hover:border-primary/40 hover:bg-primary/5 transition-all"
+                    className="flex items-center gap-2 px-6 py-3 sm:px-8 sm:py-4 rounded-full border border-border text-foreground text-sm sm:text-base font-semibold hover:border-primary/40 hover:bg-primary/5 transition-all"
                   >
                     <HiOutlineEye className="text-lg" />
                     View Projects
@@ -195,7 +195,7 @@ export default function Hero() {
                 className="relative"
               >
                 {/* Border ring */}
-                <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full p-1 bg-gradient-to-br from-primary via-primary/50 to-primary/20">
+                <div className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full p-1 bg-gradient-to-br from-primary via-primary/50 to-primary/20">
                   {/* Inner container */}
                   <div className="w-full h-full rounded-full overflow-hidden bg-background p-1">
                     <div className="w-full h-full rounded-full overflow-hidden relative">
@@ -215,7 +215,7 @@ export default function Hero() {
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                  className="absolute -right-2 top-8 sm:top-12 px-3 py-1.5 rounded-lg bg-card border border-border shadow-lg text-xs font-semibold text-foreground"
+                  className="absolute -right-2 top-4 sm:top-8 md:top-12 px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-card border border-border shadow-lg text-[10px] sm:text-xs font-semibold text-foreground"
                 >
                   <span className="text-primary">⚡</span> MERN Stack
                 </motion.div>
@@ -228,7 +228,7 @@ export default function Hero() {
                     ease: "easeInOut",
                     delay: 1,
                   }}
-                  className="absolute -left-4 bottom-12 sm:bottom-16 px-3 py-1.5 rounded-lg bg-card border border-border shadow-lg text-xs font-semibold text-foreground"
+                  className="absolute -left-2 sm:-left-4 bottom-8 sm:bottom-12 md:bottom-16 px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-card border border-border shadow-lg text-[10px] sm:text-xs font-semibold text-foreground"
                 >
                   <span className="text-primary">🤖</span> AI / ML
                 </motion.div>
@@ -241,7 +241,7 @@ export default function Hero() {
                     ease: "easeInOut",
                     delay: 0.5,
                   }}
-                  className="absolute right-2 -bottom-2 sm:bottom-2 px-3 py-1.5 rounded-lg bg-card border border-border shadow-lg text-xs font-semibold text-foreground"
+                  className="absolute right-0 sm:right-2 -bottom-2 sm:bottom-2 px-2 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-card border border-border shadow-lg text-[10px] sm:text-xs font-semibold text-foreground"
                 >
                   <span className="text-primary">☁️</span> Azure
                 </motion.div>

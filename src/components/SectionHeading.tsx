@@ -22,10 +22,10 @@ export default function SectionHeading({
   return (
     <div
       ref={ref}
-      className={`mb-16 ${align === "center" ? "text-center" : "text-left"}`}
+      className={`mb-10 sm:mb-16 ${align === "center" ? "text-center" : "text-left"}`}
     >
       <h2
-        className={`text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-foreground ${
+        className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 text-foreground ${
           align === "center" ? "mx-auto" : ""
         }`}
       >
@@ -50,7 +50,7 @@ export default function SectionHeading({
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-        className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto"
+        className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto"
       >
         {subtitle}
       </motion.p>
@@ -58,7 +58,7 @@ export default function SectionHeading({
         initial={{ scaleX: 0 }}
         animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
         transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
-        className={`mt-6 h-1 w-20 rounded-full bg-primary origin-left ${
+        className={`mt-4 sm:mt-6 h-1 w-16 sm:w-20 rounded-full bg-primary origin-left ${
           align === "center" ? "mx-auto origin-center" : ""
         }`}
       />
